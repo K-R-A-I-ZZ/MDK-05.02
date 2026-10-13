@@ -39,10 +39,7 @@ for ($i = 0; $i < $b; $i++) {
     </tr>
 <?php for ($i = 10; $i <= 99; $i++) ?>
     <tr>
-        <td><?php echo </td>
-        <td></td>
-    </tr>
-?>
+        
 </table>
 </body>
 </html>

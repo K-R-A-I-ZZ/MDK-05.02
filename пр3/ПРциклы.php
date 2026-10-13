@@ -57,5 +57,6 @@ for ($i = 1; $i <= $n; $i++) {
 echo "суммарный путь за $n дней:" . round($allDistante,2) ."км";
 
 ?>
+<p>asd</p>
 </body>
 </html>
