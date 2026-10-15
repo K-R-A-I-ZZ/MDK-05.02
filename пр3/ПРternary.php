@@ -50,24 +50,105 @@
     ?>
     <br>
     <h2><b>Match</b></h2>
-    <p>Задание1</p>
-    <p>$d = 5</p>
-    <?php
-        $d = 5;
-        $res = match ($d) {
+    <h2>задача1</h2>
+    <form>
+    <input name="digit">
+    <input type="submit">
+    </form>
+    <?php 
+    
+    if (isset($_GET['digit'])){
+    $digit = intval ($_GET['digit']);
+
+    $res = match ($digit) {
         0 => 'zero',
-        1=> 'one',
-        2=> 'two',
-        3=> 'three',
-        4=> 'four',
-        5=> 'five',
-        6=> 'six',
-        7=> 'seven',
-        8=> 'eight',
-        9=> 'nine',
-        default => "незнаю"
-        };
-        echo $res;
+        1 => 'one',
+        2 => 'two',
+        3 => 'three',
+        4 => 'four',
+        5 => 'five',
+        6 => 'six',
+        7 => 'seven',
+        8 => 'eight',
+        9 => 'nine',
+        default => "незнаю",
+    };
+        echo "результат:" .$res;
+    }
     ?>
+
+    <h2>задача2</h2>
+    <form>
+    <input name="month">
+    <input type="submit">
+    </form>
+    <?php 
+        if (isset($_GET['month'])) {
+    $month = intval ($_GET['month']);
+    
+    $h = match ($month) {
+        1 => "1 января: новый год, 7 января: рождество <br>",
+        2 => "23 февраля - день защитника отечества <br>",
+        3 => "8 марта - женский день <br>",
+        4 => "1 апреля - день дурака <br>",
+        5 => "9 мая- день победы <br>",
+        6 => "1 июня - день защиты детей <br>",
+        7 => "3 июля - День ГИБДД МВД <br>",
+        8 => "2 августа - день вдв",
+        9 => "1 сентября - день знаний <br>",
+        10 => "5 октября - День учителя <br>",
+        11 => "4 ноября — День народного единства <br>",
+        12 => "1 декабря — Всемирный день борьбы со СПИДом <br>",
+        default => "нет такого месяца",
+    };
+    echo "праздники:<br>" .$h;
+        }
+    ?>
+    <h2>задача3</h2>
+    <form>
+    <input name="num">
+    <input type="submit">
+    </form>
+    <?php
+        if (isset($_GET['num'])) {
+    $last_d = abs (intval ($_GET['num'])) % 10;
+
+    $square = match ($last_d) {
+        0 => 0,
+        1, 9 => 1,
+        2, 8 => 4,
+        3, 7 => 9,
+        4, 6 => 6,
+        5 => 5,
+
+    };
+    echo "результат" .$square;
+        }
+
+    ?>
+
+    <h2>задача4</h2>
+    <form>
+    <input name="age">
+    <input type="submit">
+    </form>
+    <?php 
+        if (isset($_GET['age'])) {
+            $k = intval ($_GET['age']);
+        if ($k >= 1 && $k <=99) {
+            $w = match (true) {
+                ($k % 100 >= 11 && $k % 100 <= 14) => "лет",
+                ($k % 10 === 1) => "год",
+                ($k % 10 >= 2 && $k % 10 <= 4) => "года",
+                default => "лет",
+            };
+            echo "Результат: Мне " .$k ."".$w;
+        } else {
+            echo "введи число от 1 до 99";
+        }
+        }
+    
+    ?>
+    
 </body>
 </html>
