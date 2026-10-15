@@ -147,8 +147,15 @@
             echo "введи число от 1 до 99";
         }
         }
-    
+
     ?>
     
+    <h2>задача5</h2>
+    <?php 
+        if (isset($_GET['month'])) {
+    $month = intval ($_GET['month']);
+    
+        }
+    ?>
 </body>
 </html>
