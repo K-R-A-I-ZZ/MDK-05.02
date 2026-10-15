@@ -19,7 +19,9 @@
     ?>
     <h2>вывод на экран</h2>
     <?php 
-        var_dump($nums);
+        for($i = 0; $i < count($nums); $i++){
+            echo $nums[$i], ' ';
+        }      
     ?>
 </body>
 </html>
