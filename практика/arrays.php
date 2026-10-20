@@ -23,5 +23,27 @@
             echo $nums[$i], ' ';
         }      
     ?>
+    <h2>цикл foreach</h2>
+    <?php 
+        foreach ($nums as $num) {
+            echo $num, ' ';
+        }
+    ?>
+    <h2>цикл foreach с индексами</h2>
+    <?php 
+        foreach ($nums as $key => $value) {
+            echo "$key - $value <br> ";
+        }
+    ?>
+    <h2>поиск максимума</h2>
+    <?php 
+        $max = $nums[0];
+        foreach ($nums as $num) {
+            if($num > $max){
+                $max = $num;
+            }
+        }
+        echo "максимум = $max"
+    ?>
 </body>
 </html>
