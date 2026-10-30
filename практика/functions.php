@@ -16,5 +16,35 @@
         sayHello('Петь');
         sayHello('Игорь');
     ?>
+    <h2>функции с несколькими параметрами</h2>
+    <?php 
+        function fullname ($firstname, $lastname){
+            echo "$firstname $lastname";
+        }
+        fullname ('вася', 'иванов');
+    ?>
+    <h2>функция с параметром по умолчанию</h2>
+    <?php 
+        function showuserinfo($firstname, $lastname, $role = 'user') {
+            echo "<p>$firstname, $lastname, роль - $role</p>";
+        }
+        showuserinfo ('Коля', 'Петров', 'student');
+        showuserinfo ('фывыф', 'as');
+    ?>
+
+    <h2>Возвращаемое значение</h2>
+    <?php 
+        function getuserinfo($firstname, $lastname, $role = 'user'){
+            return "$firstname, $lastname, $role = user";
+        }
+        $info = getuserinfo ('Иван', 'Иванов',);
+        echo $info, "<br>";
+        function squareRect($l, $w) {
+            return $l * $w;            
+        }
+        $s = squareRect(20, 40);
+        $x = squareRect( 300, 20);
+        echo "<br>", "площадь - " . $x;
+    ?>
 </body>
 </html>
