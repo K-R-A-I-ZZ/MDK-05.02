@@ -30,7 +30,7 @@
     <h2>задача2</h2>
     <p>$str = "it very very hard ";</p>
     <?php 
-        $str = "it very very hard ";
+        $str = "it very very hard.";
         $length = strlen($str);
         $count = 0;
         for ($i = 0; $i < $length; $i++) {
@@ -66,8 +66,40 @@
     <h2>задача4</h2>
     <p>$str = "hello world"</p>
     <?php 
-        $str = "hello world";
-        
+        $str = "helloworld";
+        $uni = "";
+        for ($i = 0; $i < strlen($str); $i++) {
+            $char = $str[$i];
+            $found = false;
+            for ($j = 0; $j < strlen($uni); $j++) {
+                if ($uni[$j] == $char) {
+                    $found = true;
+                    break;
+                }
+            }
+            if (!$found) {
+                $uni = $uni . $char;
+            }
+        }
+    echo "кол-во различных символов: " . strlen($uni);
+    ?>
+    <h2>задача5</h2>
+    <p>$str = "brbrkt"</p>
+    <?php 
+        $str = "brbrkt";
+        $count = 0;
+        for ($i = 0; $i < strlen($str); $i++) {
+             $char = $str[$i];
+            if ($char == 'r' || $char == 'k' || $char == 't') {
+                $count++;
+            }
+        }
+        echo "кол-во символов r, k, t: " . $count;
+    ?>
+    <h2>задача6</h2>
+    <p></p>
+    <?php 
+        function delSpace
     ?>
 </body>
 </html>
