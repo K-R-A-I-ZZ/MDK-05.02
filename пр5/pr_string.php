@@ -99,7 +99,81 @@
     <h2>задача6</h2>
     <p></p>
     <?php 
-        function delSpace
+        function delSpace($str) {
+            $length = strlen($str);
+            $res = "";
+            for ($i = 0; $i < $length; $i++) {
+                if ($str[$i] != ' ') {
+                    $res .= $str[$i];
+                } else {
+                    $reslen = strlen($res);
+                    if ($reslen > 0 && $res[$reslen - 1] != ' ') {
+                        $res .= ' ';
+                    }
+                }
+            }
+            $reslen = strlen($res);
+            if ($reslen > 0 && $res[$reslen - 1] == ' ') {
+                $fin = "";
+                for ($i = 0; $i < $reslen - 1; $i++) {
+                    $fin .= $res[$i];
+                }
+                $res = $fin;
+            }
+            return $res;
+        }
+        $str =  " php  hard ";
+        $t = delSpace($str);
+        var_dump(str_replace(' ', '.', $str));
+        echo "стало: " . $t;
+    ?>
+    <h2>задача7</h2>
+    <p>str = "i real very sad"</p>
+    <?php 
+        $str = "i real very sad";
+        $length = strlen($str);
+        $currentlen = 0;
+        $min = 999;
+        $max = 0;
+        for ($i = 0; $i < $length; $i++) {
+            if ($str[$i] != ' ' && $str[$i] != '.') {
+                $currentlen++;
+            } else {
+                if ($currentlen > 0) {
+                    if ($currentlen > $max) {
+                        $max = $currentlen;
+                    }
+                    if ($currentlen < $min) {
+                        $min = $currentlen;
+                    }
+                    $currentlen = 0;
+                }
+            }
+        }
+        echo "минимальное количество символов: " . $min . "<br>";
+        echo "максимальное количество символов" . $max; 
+    ?>
+    <h2>задача8</h2>
+    <p>str = "popugaai aaaaaara."</p>
+    <?php 
+        $str = "popugaai aaaaaara.";
+        $length = strlen($str);
+        $current = 0;
+        $max = 0;
+        for ($i = 0; $i < $length; $i++) {
+            if ($str[$i] == 'a') {
+                $current++;
+            } else {
+                if ($current > $max) {
+                    $max = $current;
+                }
+                $current = 0;
+            }
+        }
+        if ($current > $max) {
+            $max = $current;
+        }
+        echo "наибольшая цепочка: " . $max;
     ?>
 </body>
 </html>
