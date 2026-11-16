@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>задача1</h2>
-    <p>$str = "hello (mad) world";</p>
+    <p>str = "hello (mad) world"</p>
     <?php 
         $str = "hello (mad) world";
         $length = strlen($str);
@@ -28,7 +28,7 @@
         }
     ?>
     <h2>задача2</h2>
-    <p>$str = "it very very hard ";</p>
+    <p>str = "it very very hard "</p>
     <?php 
         $str = "it very very hard.";
         $length = strlen($str);
@@ -43,7 +43,7 @@
         echo "Количество слов: " . $count;
     ?>
     <h2>задача3</h2>
-    <p>$str = "seal steal pop test.";</p>
+    <p>str = "seal steal pop test."</p>
     <?php 
         $str = "seal steal pop test.";
         $length = strlen($str);
@@ -64,7 +64,7 @@
         }
     ?>
     <h2>задача4</h2>
-    <p>$str = "hello world"</p>
+    <p>str = "hello world"</p>
     <?php 
         $str = "helloworld";
         $uni = "";
@@ -84,7 +84,7 @@
     echo "кол-во различных символов: " . strlen($uni);
     ?>
     <h2>задача5</h2>
-    <p>$str = "brbrkt"</p>
+    <p>str = "brbrkt"</p>
     <?php 
         $str = "brbrkt";
         $count = 0;
@@ -122,8 +122,9 @@
             }
             return $res;
         }
-        $str =  " php  hard ";
+        $str =  "   php    hard     ";
         $t = delSpace($str);
+        echo "было: " . $t;
         var_dump(str_replace(' ', '.', $str));
         echo "стало: " . $t;
     ?>
