@@ -42,5 +42,6 @@
         $arr = explode(' ', $str3);
         var_dump($arr);
     ?>
+    <h2> массив в строку implode</h2>
 </body>
 </html>
