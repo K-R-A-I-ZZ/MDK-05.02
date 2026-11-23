@@ -57,15 +57,15 @@
      <p>ehhhh repeatirion is mother of learning</p>
      <?php
         $str = "ehhhh repeatirion is mother of learning";
-        $ww = str_word_count($str, 1);
-        $length = array_map('strlen', $ww);
+        $word = str_word_count($str, 1);
+        $length = array_map('strlen', $word);
         echo "самое короткое слово: " . min($length) . "символов, <br>";
         echo "самое длинное слово: " . max($length) . "символов";
      ?>
      <h2>задача7</h2>
-     <p>$str = "popugaai aaaaaara"</p>
+     <p>$str = "ara aaaaaara"</p>
      <?php 
-        $str = "popugaai aaaaaara";
+        $str = "ara aaaaaara";
      ?>
 </body>
 </html>
